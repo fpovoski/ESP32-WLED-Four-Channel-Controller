@@ -2,10 +2,10 @@ ESP32 based board with 4 LED channels used for use with WLED software. This ESP3
 
 Size: 84mm x 44mm with 2mm mounting holes.
 Processor: ESP32 on ESP32-WROOM-E module with WiFi and BT V4.2.
-Power Input: 5-15v @4 amps max via 5.5mm x 2.1mm barrel or 5v via USB-C connector.
+Power Input: 5-14v @12 amps max via 5.5mm x 2.1mm barrel or 5v via USB-C connector.
 On Board Regulation: 5v @2 amps switching regulator, 3.3v @800 milliamps.
 LED Outputs: Four connectors each with 5v driven LED data output signals, 5/12V power (voltage is the input voltage on barrel connector), and ground.
-Four amp resettable fused power input (for applications requiring more than 4 amps use external power injection to LED strips, for most use cases this is approximately 600 LEDs).
+Four amp resettable fused power input (for applications requiring more than 12 amps use external power injection to LED strips, for most use cases this is approximately 2000 LEDs).
 Input/Output: USB 2.0 via USB-C connector using the CP2120N.
 Input/Output: Standard WEMOS daughter interface on two 1x8 pin headers.
 The board comes with four 4-pin to 3-pin cables.
