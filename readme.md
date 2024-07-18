@@ -10,23 +10,22 @@ ESP32 based board for addressable LED control in 3D printer enclosures, audio-vi
 
 * Size: 84mm x 44mm with 2mm mounting holes
 * Processor: ESP32 on ESP32-WROOM-E module with WiFi and BT V4.2
-* Power Input: 12v @ 12 amps max via 5.5mm x 2.1/2.5mm barrel connector or 5v via USB-C connector.
-* 12 amp resettable fused input power.
+* Power Input: 12v @ 10 amps max via 5.5mm x 2.1/2.5mm barrel connector or 5v via USB-C connector.
+* 10 amp resettable fused input power.
 * On Board Regulation: 5v @ 2 amps switching regulator, 3.3v @ 1.0 amp.
-* Input/Output: One 5v tolerant input (1k pullup) and one 5v driven output, with 12V power (7+ amps per conn.) and ground on four, four-pin Molex KK series connectors. Compatible with most PWM PC style fans with speed return. Of course other use cases for these interfaces such as driving LED strings are available.
+* Input/Output: One 5v tolerant input (1k pullup) and one 5v driven output, with 12V power (4+ amps per conn.) and ground on four, four-pin Molex KK series connectors. Compatible with most PWM PC style fans with speed return. Of course other use cases for these interfaces such as driving LED strings are available.
 * I/O: Three screw down three position headers with common one-wire interface as well as 3.3v power and ground.
 * I/O: USB 2.0 via USB-C connector using the CP2102N.
 * I/O: Standard WEMOS daughter interface on two 1x8 pin headers.
 * I/O: JST SH connector w/ I2C/PDM interface 3.3v/5.0v selectable power (compatible with Adafruit's STEMMA QT/ Sparkfun Qwiic sensors).
-* Add-ons: Relay - uses GPIO16 mapped to the WEMOS daughter interface.
+* Add-ons: Relay - uses GPIO18 mapped to the WEMOS daughter interface.
 
 A 3D printed enclosure is also available: https://www.tindie.com/products/29364/
 
 ## Setup and Configuration
 
 * DO NOT ATTEMPT TO POWER FANS FROM USB-C. Supplied power (5v-14V) to barrel connector
-needs to match the voltage of the PWM fan (or other device) you are driving. Board has an onboard
-self-resetting flex fuse rated at 12 amps.
+needs to match the voltage of the PWM fan (or other device) you are driving. 
 
 * To place on WiFi network use 2.4G phone to connect to "AVFAN1 Fallback Hotspot" and
 update SSID and PASSWORD. Once connected to your WiFi network, to access the webpage of
@@ -54,10 +53,14 @@ the ESPhome instructions: https://esphome.io/components/sensor/dallas.html.
 
 <img src="work/Fan_Control_Board.0.8.B_rot.png" width=400>
 
-### Dallas One-wire Screw Terminal Connectors J1-J3
+###Open Collector 2.54mm Header Connector 
+| CONNECTOR | PIN1 | PIN2 |
+| --------- | ---- | ---- | 
+| J1 | GND | IO26 |
+
+### Dallas One-wire Screw Terminal Connectors J2-J3
 | CONNECTOR | PIN1 | PIN2 | PIN3 |
 | --------- | ---- | ---- | ---- |
-| J1 | +3.3V | IO27 | GND |
 | J2 | +3.3V | IO27 | GND |
 | J3 | +3.3V | IO27 | GND |
 
@@ -78,7 +81,7 @@ the ESPhome instructions: https://esphome.io/components/sensor/dallas.html.
 - USB 2.0, 5V, 2amps.
 
 ### Power Jack Connector J9
-- +5-14V 12 amps max.
+- +5-14V 10 amps max.
 - Directly supplies J4-J7 PWR
 - Must match your fan or LED voltage.
 
