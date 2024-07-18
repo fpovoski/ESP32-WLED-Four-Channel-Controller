@@ -53,7 +53,7 @@ the ESPhome instructions: https://esphome.io/components/sensor/dallas.html.
 
 <img src="work/Fan_Control_Board.0.8.B_rot.png" width=400>
 
-###Open Collector 2.54mm Header Connector 
+### Open Collector 2.54mm Header Connector 
 | CONNECTOR | PIN1 | PIN2 |
 | --------- | ---- | ---- | 
 | J1 | GND | IO26(OC) |
